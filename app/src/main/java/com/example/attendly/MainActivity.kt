@@ -16,14 +16,23 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.login_activity)
 
         val tvNoAccount = findViewById<TextView>(R.id.tvNoAccount)
+        val btnSubmit = findViewById<Button>(R.id.btnSubmit)
 
         tvNoAccount.setOnClickListener {
 
             val intent = Intent(this, RegisterAccount::class.java)
 
             startActivity(intent)
+        }
+
+        btnSubmit.setOnClickListener {
+
+            val intent = Intent(this, SuccessfulLogin::class.java)
+            startActivity(intent)
             finish()
         }
+
+
 
     }
 }
