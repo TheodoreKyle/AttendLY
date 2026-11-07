@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#026D83"
@@ -8,89 +9,106 @@
     android:padding="10dp"
     android:gravity="center">
 
-    <androidx.cardview.widget.CardView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="6dp"
-        app:cardUseCompatPadding="true">
+        android:layout_height="match_parent"
+        android:padding="16dp">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="124dp"
+            android:layout_height="130dp"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/attendly"
+            tools:layout_editor_absoluteX="121dp"
+            tools:layout_editor_absoluteY="63dp" />
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="#1E1E1E"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="121dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:fontFamily="@font/jersey10"
-                android:text="Login"
-                android:textSize="48dp"
-                android:textColor="#FFFFFF">
 
-            </TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/jersey10"
-                android:text="Email:"
-                android:textSize="28dp"
-                android:textColor="#819BA6">
-
-            </TextView>
-
-            <EditText
-                android:id="@+id/etLoginEmail"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/jersey10"></EditText>
-
-            <TextView
-                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/jersey10"
-                android:text="Password:"
-                android:textSize="28dp"
-                android:textColor="#819BA6">
-            </TextView>
+                android:background="#1E1E1E"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-            <EditText
-                android:id="@+id/etLoginPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:fontFamily="@font/jersey10"
-                android:inputType="textPassword"></EditText>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/jersey10"
+                    android:text="Login"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginTop="100dp"
+                    android:textSize="48dp">
 
-            <TextView
-                android:id="@+id/tvNoAccount"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Don't have an account?"
-                android:fontFamily="@font/jersey10"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:layout_marginTop="64dp"
-                android:textColor="#0076A8"
-                android:focusable="true"
-                android:clickable="true"
-                />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/jersey10"
+                    android:text="Email:"
+                    android:textColor="#819BA6"
+                    android:textSize="28dp">
+
+                </TextView>
+
+                <EditText
+                    android:id="@+id/etLoginEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jersey10"
+                    android:textColor="#FFFFFF"></EditText>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/jersey10"
+                    android:text="Password:"
+                    android:textColor="#819BA6"
+                    android:textSize="28dp"></TextView>
+
+                <EditText
+                    android:id="@+id/etLoginPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/jersey10"
+                    android:inputType="textPassword"
+                    android:textColor="#FFFFFF"></EditText>
+
+                <TextView
+                    android:id="@+id/tvNoAccount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="64dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/jersey10"
+                    android:text="Don't have an account?"
+                    android:textColor="#0076A8"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#56819BA6"
         android:fontFamily="@font/jersey10"
         android:text="Submit"
-        android:textSize="40sp"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#819BA6"/>
+        android:textSize="40sp" />
 
 </LinearLayout>
