@@ -29,29 +29,24 @@ class RegisterAccount : AppCompatActivity() {
             finish()
         }
 
-        // Handle Account Creation
         btnCreateAccount.setOnClickListener {
             val email = etEmail.text.toString().trim()
             val password = etPassword.text.toString().trim()
 
-            // Validate email format and password length
             if (!Patterns.EMAIL_ADDRESS.matcher(email).matches() || password.length < 6) {
-                Toast.makeText(this, "email is invalid or wrong password format", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Email is invalid or wrong password format", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
 
-            // Create user in Firebase
             auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
-                        // Success block
                         Toast.makeText(this, "Account Created Successfully!", Toast.LENGTH_SHORT).show()
 
-                        // Redirect to MainActivity
                         val intent = Intent(this, MainActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
-                        // Failure block (e.g., email already in use)
                         Toast.makeText(this, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                     }
                 }
