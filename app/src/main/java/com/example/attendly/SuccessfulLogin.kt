@@ -1,10 +1,12 @@
 package com.example.attendly
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import android.widget.*
-import android.content.*
+import android.widget.Button
+import android.widget.TextView
+import com.google.firebase.auth.FirebaseAuth
 
 class SuccessfulLogin : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,15 +17,16 @@ class SuccessfulLogin : AppCompatActivity() {
         val btnLogout = findViewById<Button>(R.id.btnLogout)
         val tvDisplayUsername = findViewById<TextView>(R.id.tvDisplayUsername)
 
-        tvDisplayUsername.text = "Successfully Logged In! \nUser: thisuser"
+        val userEmail = intent.getStringExtra("USER_EMAIL") ?: "Unknown User"
 
+        tvDisplayUsername.text = "Successfully Logged In!\nUser: $userEmail"
 
         btnLogout.setOnClickListener {
+            FirebaseAuth.getInstance().signOut()
+
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
-
-
     }
 }
