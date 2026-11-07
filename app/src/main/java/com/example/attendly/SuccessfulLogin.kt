@@ -13,6 +13,10 @@ class SuccessfulLogin : AppCompatActivity() {
         setContentView(R.layout.activity_successfullogin)
 
         val btnLogout = findViewById<Button>(R.id.btnLogout)
+        val tvDisplayUsername = findViewById<TextView>(R.id.tvDisplayUsername)
+
+        tvDisplayUsername.text = "Successfully Logged In! \nUser: thisuser"
+
 
         btnLogout.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
