@@ -61,10 +61,15 @@
                     android:id="@+id/etLoginEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Enter Email"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/edittext_box"
                     android:fontFamily="@font/jersey10"
+                    android:hint="Enter Email"
+                    android:inputType="textEmailAddress"
                     android:textColor="#FFFFFF"
-                    android:textColorHint="#224E61">
+                    android:textColorHint="#4A6B7C"
+                    android:textSize="22sp">
 
                 </EditText>
 
@@ -82,11 +87,14 @@
                     android:id="@+id/etLoginPassword"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/edittext_box"
                     android:fontFamily="@font/jersey10"
-                    android:inputType="textPassword"
                     android:hint="Enter Password"
+                    android:inputType="textPassword"
                     android:textColor="#FFFFFF"
-                    android:textColorHint="#224E61">
+                    android:textColorHint="#4A6B7C"
+                    android:textSize="22sp">
 
                 </EditText>
 
