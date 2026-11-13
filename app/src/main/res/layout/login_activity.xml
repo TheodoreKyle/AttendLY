@@ -146,7 +146,7 @@
         <ImageView
             android:id="@+id/ivBottomMascot"
             android:layout_width="167dp"
-            android:layout_height="190dp"
+            android:layout_height="167dp"
             android:layout_marginStart="10dp"
             android:layout_marginBottom="5dp"
             android:rotation="15"
