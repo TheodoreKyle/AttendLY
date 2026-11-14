@@ -45,7 +45,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1"
+        >
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -80,14 +82,14 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
+            app:cardCornerRadius="24dp"
             app:cardElevation="3dp"
             android:layout_marginTop="24dp"
             >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
+                android:layout_height="550dp"
                 android:orientation="vertical"
                 android:background="#265A71"
                 android:padding="16dp">
@@ -184,5 +186,83 @@
 
     </LinearLayout>
 
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="3dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginBottom="16dp"
+            >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#001824"
+                    android:padding="16dp"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Events"
+
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/jersey10"
+
+                        android:backgroundTint="#265A71"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Created"
+
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/jersey10"
+
+                        android:backgroundTint="#265A71"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        >
+                    </Button>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Joined"
+
+                        android:textSize="28sp"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/jersey10"
+
+                        android:backgroundTint="#265A71"
+                        android:layout_weight="1"
+                        >
+                    </Button>
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="top|center_horizontal"
+            android:elevation="10dp"
+            app:srcCompat="@drawable/attendly" />
+    </FrameLayout>
 
 </LinearLayout>
