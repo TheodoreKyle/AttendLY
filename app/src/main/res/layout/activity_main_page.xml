@@ -1,172 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#026D83"
-    android:orientation="vertical"
-    >
-
+    android:background="@drawable/bg"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#001824"
-        android:padding="24dp"
+        android:gravity="center_vertical"
         android:orientation="horizontal"
-        >
+        android:paddingHorizontal="20dp"
+        android:paddingTop="38dp"
+        android:paddingBottom="14dp">
 
         <TextView
             android:id="@+id/tvGreetings"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Hi, Username!"
-
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:fontFamily="@font/jersey10"
             android:layout_weight="1"
-            android:layout_marginTop="10dp"
-            >
-        </TextView>
+            android:fontFamily="@font/jersey10"
+            android:text="Hi, Username!"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            app:srcCompat="@drawable/attendly"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
             android:clickable="true"
             android:focusable="true"
-            />
+            app:srcCompat="@drawable/attendly" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:orientation="vertical">
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="14dp">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="3dp"
-            android:layout_marginTop="24dp"
-            >
-
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/glass_container"
                 android:orientation="horizontal"
-                android:background="#265A71"
                 android:padding="8dp">
 
                 <EditText
+                    android:id="@+id/etSearchEvents"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:background="@drawable/edittext_box"
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:drawablePadding="8dp"
                     android:fontFamily="@font/jersey10"
+                    android:hint="Search events..."
+                    android:inputType="text"
+                    android:paddingHorizontal="12dp"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#4A6B7C"
+                    android:textSize="22sp" />
 
-                    android:hint="Search Events"
-                    android:textColorHint="#204150"
-                    android:textSize="32sp">
-
-                </EditText>
             </LinearLayout>
+
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="12dp"
-            app:cardElevation="3dp"
-            android:layout_marginTop="24dp"
-            >
+            android:layout_height="420dp"
+            android:layout_marginTop="14dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="600dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/glass_container"
                 android:orientation="vertical"
-                android:background="#265A71"
-                android:padding="16dp">
+                android:padding="14dp">
 
-                <!--this is an item-->
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    app:cardBackgroundColor="#1E1E1E"
                     app:cardCornerRadius="12dp"
-                    app:cardElevation="3dp"
-                    android:layout_marginTop="24dp"
-                    >
+                    app:cardElevation="3dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:background="#1E1E1E"
-                        android:padding="12dp">
+                        android:paddingHorizontal="14dp"
+                        android:paddingVertical="12dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            >
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Event Name"
-
-                                android:textColor="#FFFFFF"
-                                android:fontFamily="@font/jersey10"
-                                android:textSize="48sp"
                                 android:layout_weight="1"
-                                >
-                            </TextView>
+                                android:fontFamily="@font/jersey10"
+                                android:text="Event Name"
+                                android:textColor="#FFFFFF"
+                                android:textSize="28sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="0/1000"
-
-                                android:textColor="#C7C589"
                                 android:fontFamily="@font/jersey10"
-                                android:textSize="48sp"
-                                >
-                            </TextView>
+                                android:text="0/1000"
+                                android:textColor="#C7C589"
+                                android:textSize="28sp" />
 
                         </LinearLayout>
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:layout_marginTop="20dp">
+                            android:layout_marginTop="6dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:text="Category: Sample"
-
-                                android:textSize="24sp"
-                                android:textColor="#E35E60"
-                                android:fontFamily="@font/jersey10"
                                 android:layout_weight="1"
-                                >
-                            </TextView>
+                                android:fontFamily="@font/jersey10"
+                                android:text="Category: Sample"
+                                android:textColor="#E35E60"
+                                android:textSize="16sp" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Date &amp; Time: Nov 20, 2026 | 3PM - 5PM"
-
-                                android:textSize="16sp"
-                                android:textColor="#B089C7"
                                 android:fontFamily="@font/jersey10"
-                                >
-                            </TextView>
+                                android:text="Date &amp; Time: Nov 20, 2026 | 3PM - 5PM"
+                                android:textColor="#B089C7"
+                                android:textSize="16sp" />
 
                         </LinearLayout>
 
@@ -174,15 +161,94 @@
 
                 </androidx.cardview.widget.CardView>
 
-
             </LinearLayout>
-
-
 
         </androidx.cardview.widget.CardView>
 
-
     </LinearLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="62dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bottom_nav_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="14dp"
+                android:paddingTop="20dp"
+                android:paddingBottom="12dp">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTabEvents"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/nav_tab_selected"
+                    android:fontFamily="@font/jersey10"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="Events"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTabCreated"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_box"
+                    android:fontFamily="@font/jersey10"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="Created"
+                    android:textAllCaps="false"
+                    android:textColor="#6B838E"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnTabJoined"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_box"
+                    android:fontFamily="@font/jersey10"
+                    android:gravity="center"
+                    android:padding="0dp"
+                    android:text="Joined"
+                    android:textAllCaps="false"
+                    android:textColor="#6B838E"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivNavMascot"
+            android:layout_width="82dp"
+            android:layout_height="82dp"
+            android:layout_gravity="top|center_horizontal"
+            android:elevation="10dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/attendly" />
+
+    </FrameLayout>
 
 </LinearLayout>
