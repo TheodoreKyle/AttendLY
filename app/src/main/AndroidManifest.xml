@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AttendLY">
         <activity
-            android:name=".MainActivity"
+            android:name=".MainPage"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -27,7 +27,11 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".MainPage"
+            android:name=".MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".EventCreation"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
@@ -35,7 +39,7 @@
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".EventCreation"
+            android:name=".ProfilePage"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
