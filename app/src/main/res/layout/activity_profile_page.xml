@@ -9,47 +9,37 @@
     android:orientation="vertical"
     android:background="@drawable/bg"
     android:padding="24dp"
-    android:layout_gravity="center"
-    >
+    android:layout_gravity="center" >
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Back"
-
         android:fontFamily="@font/jersey10"
         android:textSize="32sp"
         android:backgroundTint="#4A6B7C"
-        android:layout_marginVertical="8dp"
-        >
+        android:layout_marginVertical="8dp" >
     </Button>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clipChildren="false"
-        android:clipToPadding="false"
-        >
-
-
-
+        android:clipToPadding="false" >
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="12dp"
         app:cardElevation="1dp"
-        android:layout_marginTop="110dp"
-        >
+        android:layout_marginTop="110dp" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#1E1E1E"
-
             android:orientation="vertical"
-            android:padding="32dp"
-            >
+            android:padding="32dp" >
 
             <ImageView
                 android:id="@+id/imageView"
@@ -65,12 +55,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
                 android:layout_marginVertical="16dp"
                 android:fontFamily="@font/jersey10"
                 android:text="Profile"
                 android:textColor="#FFFFFF"
-                android:textSize="48sp">
+                android:textSize="48sp" >
 
             </TextView>
 
@@ -83,21 +72,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/jersey10"
-
                     android:text="Full Name: "
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"></TextView>
+                    android:textSize="28sp">
+
+                </TextView>
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     android:fontFamily="@font/jersey10"
                     android:hint="Current Name"
                     android:textColorHint="#4A6B7C"
-                    android:textSize="24sp"></EditText>
-
+                    android:textSize="24sp">
+                </EditText>
 
             </LinearLayout>
 
@@ -110,23 +99,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/jersey10"
-
                     android:text="Userame: "
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"></TextView>
+                    android:textSize="28sp">
+                </TextView>
 
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-
                     android:fontFamily="@font/jersey10"
                     android:hint="Current Name"
                     android:textColorHint="#4A6B7C"
-                    android:textSize="24sp"></EditText>
+                    android:textSize="24sp">
+                </EditText>
 
             </LinearLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -137,24 +125,22 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/jersey10"
-
                     android:text="Age: "
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"></TextView>
+                    android:textSize="28sp" >
+                </TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/jersey10"
-
                     android:text="20"
                     android:textColor="#4A6B7C"
-                    android:textSize="24sp"></TextView>
+                    android:textSize="24sp" >
+                </TextView>
 
             </LinearLayout>
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -165,20 +151,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/jersey10"
-
                     android:text="Gender: "
                     android:textColor="#FFFFFF"
-                    android:textSize="28sp"></TextView>
+                    android:textSize="28sp">
+                </TextView>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="@font/jersey10"
-
                     android:text="Male/Female"
                     android:textColor="#4A6B7C"
-                    android:textSize="24sp"></TextView>
+                    android:textSize="24sp">
+                </TextView>
 
             </LinearLayout>
 
@@ -205,9 +191,7 @@
                     android:text="Regular/Admin"
                     android:textColor="#4A6B7C"
                     android:textSize="24sp"></TextView>
-
             </LinearLayout>
-
 
             <Button
                 android:layout_width="wrap_content"
@@ -223,7 +207,6 @@
 
             </Button>
 
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -236,11 +219,12 @@
             app:srcCompat="@drawable/attendlymasc3"
             />
     </FrameLayout>
+
     <Button
+        android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout"
-
         android:fontFamily="@font/jersey10"
         android:textSize="40sp"
         android:backgroundTint="#4A6B7C"
