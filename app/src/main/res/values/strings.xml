@@ -5,4 +5,11 @@
     <string name="login">Login</string>
     <string name="password">Password:</string>
     <string name="submit">Submit</string>
+    <string-array name="gender_options">
+        <item>Select Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+        <item>Non-binary</item>
+        <item>Prefer not to disclose</item>
+    </string-array>
 </resources>
